@@ -1,0 +1,63 @@
+.bookgrid{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+.bookview{
+    width:15em;
+    height:20em;
+    background-position:top center;
+    background-repeat:no-repeat;
+    background-size:cover;
+    margin:0.5em;
+    border-radius:0.35em;
+    box-shadow:0 0 10px 3px rgba(0,0,0,0.1);
+    overflow:hidden;
+}
+.bookview>.foreground{
+    width:100%;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+    align-items:center;
+    opacity:0;
+    background-color:rgba(0,0,0,0.65);
+    transition:350ms;
+}
+.booktitle{
+    max-width:85%;
+    font-family:var(--mainFont);
+    font-weight:700;
+    font-size:1.75em;
+    text-align:center;
+    text-transform:capitalize;
+    color:var(--backgroundColor);
+}
+.readbtn{
+    font-size:0.75em !important;
+    color:var(--backgroundColor);
+    width:fit-content;
+    padding:0.5em 2em;
+    border-radius:0.25em;
+    background-color:var(--majorColor);
+}
+
+
+@media(any-hover){
+    .bookview:hover{
+        filter:brightness(1);
+    }
+    .bookview:hover>.foreground{
+        opacity:1;
+    }
+}
+
+@media(hover:none){
+    .bookview:active{
+        filter:brightness(1);
+    }
+    .bookview:active>.foreground{
+        opacity:1;
+    }
+}

@@ -1,0 +1,69 @@
+:root{
+    font-size:1vw;
+    --mainFont:"Poppins",sans-serif;
+    --majorFont:Arial;
+    --minorFont:borel;
+    --mainColor:#1F2937;
+    --majorColor:#3882F6;
+    --minorColor:#E5E7EB;
+    --textColor:black;
+    --backgroundColor:#F9FAF8;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    user-select:none;
+    -ms-user-select:none;
+    -moz-user-select:none;
+    -webkit-user-select:none;
+}
+html,body{
+    font-family:var(--mainFont);
+    font-size:1em;
+    background-color:var(--backgroundColor);
+    color:var(--textColor);
+    scroll-behavior:smooth;
+}
+button,.clickable{
+    border:none;
+    transition:200ms;
+}
+
+
+@font-face{
+    font-family:"borel";
+    src: url("./Assets/Fonts/Borel-Regular.ttf");
+}
+
+@keyframes fadeIn {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+
+
+@media(max-width:15cm){
+    :root{
+        font-size:3vw;
+    }
+}
+
+@media(any-hover){
+    *:is(button,.clickable):hover{
+        cursor:pointer;
+        opacity:0.95;
+        filter:brightness(0.65);
+    }
+}
+
+@media(hover:none){
+    *:is(button,.clickable):active{
+        cursor:pointer;
+        opacity:0.85;
+        filter:brightness(0.85);
+    }
+}

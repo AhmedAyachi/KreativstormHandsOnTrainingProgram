@@ -1,0 +1,107 @@
+.preview{
+    max-width:100vw;
+    height:100vh;
+}
+.background{
+    position:absolute;
+    width:100%;
+    height:100%;
+    left:0;
+    top:0;
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center top;
+    filter:blur(85px);
+    z-index:0;
+}
+.foreground{
+    position:relative;
+    width:100%;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    align-items:stretch;
+    z-index:1;
+}
+.bookname{
+    font-family:var(--mainFont);
+    font-weight:700;
+    font-size:5em;
+    letter-spacing:0.25em;
+    text-transform:uppercase;
+    text-align:center;
+    color:var(--backgroundColor);
+    align-self:center;
+    margin:1em 0;
+}
+.overview{
+    display:flex;
+    justify-content:center;
+    align-items:stretch;
+}
+.cover{
+    width:20em;
+    margin-right:5em;
+    border-radius:0.5em;
+    filter:drop-shadow(0 0 100px rgba(0,0,0,0.25));
+}
+.info{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+    align-items:stretch;
+}
+.info>ul{
+    list-style:inside square;
+}
+.info>ul>li{
+    font-family:var(--minorFont);
+    font-size:2em;
+    margin:0.5em;
+    color:var(--mainColor)
+}
+.info>button{
+    max-width:15em;
+    font-size:1.25em;
+    text-transform:capitalize;
+    color:var(--backgroundColor);
+    padding:0.75em 1em;
+    border-radius:0.25em;
+    background-color:rgba(0,0,0,0.1);
+}
+.backbtn{
+    position:fixed;
+    width:3em;
+    left:1em;
+    top:1em;
+    filter:drop-shadow(0 0 10px rgba(0,0,0,0.1));
+    z-index:2;
+}
+
+@media(max-width:15cm){
+    .foreground{
+        justify-content:space-evenly;
+    }
+    .bookname{
+        font-size:3em;
+        margin:0;
+    }
+    .overview{
+        flex-direction:column;
+        align-items:center;
+    }
+    .cover{
+        width:auto;
+        height:25em;
+        margin-right:0;
+    }
+    .info{
+        align-items:center;
+    }
+    .info>ul{
+        font-size:0.85em;
+        list-style:none;
+        margin:2em 0;
+    }
+}

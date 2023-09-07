@@ -1,0 +1,151 @@
+body{
+    --paddingHorizontal:12.5em;
+}
+header{
+    font-size:1em;
+    height:15vh;
+    padding:0;
+    padding-left:var(--paddingHorizontal);
+    padding-right:var(--paddingHorizontal);
+}
+section{
+    max-width:100%;
+    margin-bottom:2em;
+}
+.preview{
+    max-width:100%;
+    height:85vh;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    padding:0em var(--paddingHorizontal);
+    background-color:var(--mainColor);
+    overflow:hidden;
+}
+.recentlyadded{
+    max-width:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    align-items:stretch;
+}
+.recentlyadded>h1{
+    font-family:var(--minorFont);
+    font-size:3em;
+    text-align:center;
+    text-transform:capitalize;
+    color:var(--majorColor);
+    margin-bottom:0.25em;
+}
+.inspiringquote{
+    max-width:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    align-items:center;
+    padding:2em;
+    margin-bottom:0;
+    background-color:var(--minorColor);
+}
+.inspiringquote>blockquote{
+    max-width:75%;
+    font-family:var(--mainFont);
+    font-weight:400;
+    font-size:1.5em;
+    line-height:1.5em;
+    color:var(--textColor);
+}
+.inspiringquote>blockquote>img{
+    width:5em;
+}
+.overview{
+    flex:1;
+    animation:fadeIn 2s 1 ease-out  forwards;
+}
+.slogan{
+    font-family:var(--minorFont);
+    font-size:3em;
+    line-height:1.5em;
+    text-transform:capitalize;
+    color:var(--backgroundColor);
+    margin-top:0.5em;
+}
+.description{
+    font-size:1em;
+    line-height:1.5em;
+    color:var(--minorColor);
+    max-width:23em;
+    margin-top:1em 0;
+}
+.explorebtn{
+    display:inline-block;
+    font-size:1.5em;
+    text-align:center;
+    text-decoration:none;
+    text-transform:capitalize;
+    color:var(--backgroundColor);
+    padding:0.25em 1.5em;
+    margin-top:0.65em;
+    border-radius:0.25em;
+    background-color:var(--majorColor);
+}
+.illustration{
+    width:30em;
+    margin-left:5em;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:cover;
+    animation:fadeIn 2s 1 ease-out  forwards;
+}
+.quoteename{
+    font-family:var(--minorFont);
+    font-weight:700;
+    font-size:2em;
+    color:var(--mainColor);
+    margin-top:1em;
+    align-self:flex-end;
+}
+.goupbtn{
+    position:fixed;
+    width:2.5em;
+    right:1em;
+    bottom:1em;
+}
+
+@media(max-width:15cm){
+    body{
+        --paddingHorizontal:3em;
+    }
+    header{
+        padding:1vh;
+        height:fit-content;
+        overflow:hidden;
+    }
+    .preview{
+        height:88vh;
+        flex-direction:column;
+        justify-content:flex-start;
+    }
+    .overview{
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:stretch;
+        margin-bottom:2em;
+    }
+    .illustration{
+        width:auto;
+        height:20em;
+        margin-left:0;
+        margin-bottom:2em;
+    }
+    .slogan{
+        font-size:2.5em;
+    }
+    .description{
+        font-size:1em;
+    }
+    .explorebtn{
+        margin-top:0.5em;
+    }
+}

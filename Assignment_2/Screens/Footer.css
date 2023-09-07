@@ -1,0 +1,27 @@
+footer{
+    max-width:100%;
+    min-height:10em;
+    display:flex;
+    justify-content:space-around;
+    align-items:flex-start;
+    padding:3em 0;
+    background-color:var(--mainColor);
+}
+footer>div>h1{
+    font-size:1.5em;
+    text-transform:capitalize;
+    color:var(--backgroundColor);
+}
+footer>div>ul{
+    margin-top:1em;
+    list-style:none;
+    color:var(--backgroundColor);
+}
+footer>div>ul>li{
+    text-transform:lowercase;
+    color:var(--backgroundColor);
+    margin-bottom:0.35em;
+}
+footer>div>ul>li::first-letter{
+    text-transform:uppercase;
+}
